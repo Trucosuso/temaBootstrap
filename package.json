@@ -1,0 +1,30 @@
+{
+  "name": "tema-bootstrap",
+  "version": "0.1.0",
+  "description": "Modificación de bootstrap",
+  "main": "index.html",
+  "scripts": {
+    "watch": "node-sass -o css scss/main.scss -w"
+  },
+  "keywords": [],
+  "author": "Jesus L. Pinzolas",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^6.0.0",
+    "eslint": "^7.20.0",
+    "globby": "^11.0.2",
+    "gulp": "^4.0.2",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-dart-scss": "^1.1.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-processhtml": "^1.2.0",
+    "gulp-rename": "^2.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0"
+  }
+}
