@@ -4,7 +4,8 @@
   "description": "Modificación de bootstrap",
   "main": "index.html",
   "scripts": {
-    "watch": "node-sass -o css scss/main.scss -w"
+    "build": "gulp",
+    "watch": "gulp watching"
   },
   "keywords": [],
   "author": "Jesus L. Pinzolas",
