@@ -6,7 +6,7 @@
   "scripts": {
     "build": "gulp",
     "watch": "gulp watching",
-    "sassdoc": "sassdoc src/scss/"
+    "sassdoc": "sassdoc src/scss/ --dest ./docs"
   },
   "keywords": [],
   "author": "Jesus L. Pinzolas",
