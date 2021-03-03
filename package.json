@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "build": "gulp",
-    "watch": "gulp watching"
+    "watch": "gulp watching",
+    "sassdoc": "sassdoc src/scss/"
   },
   "keywords": [],
   "author": "Jesus L. Pinzolas",
