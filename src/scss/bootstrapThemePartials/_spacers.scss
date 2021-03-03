@@ -1,0 +1,24 @@
+////
+/// Personalización de espacios de bootstrap
+/// @group spacers
+/// @author Jesús L. Pinzolas
+////
+
+/// Espacio
+/// @type Number
+$spacer: 1rem;
+
+$spacers: ();
+/// Nuevos espacios
+/// @type Map
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .3),
+    2: ($spacer * .55),
+    3: $spacer,
+    4: ($spacer * 1.75),
+    5: ($spacer * 3)
+  ),
+  $spacers
+);

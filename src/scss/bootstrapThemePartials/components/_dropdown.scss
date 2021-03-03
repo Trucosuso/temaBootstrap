@@ -1,0 +1,47 @@
+////
+/// Personalización de dropdowns
+/// @group dropdowns
+/// @author Jesús L. Pinzolas
+////
+
+
+/// Padding vertical del dropdown. Ampliado
+/// @type Number
+$dropdown-padding-y:                0.75rem;
+/// Color del texto. Utiliza el definido en el tema
+/// @type Color
+$dropdown-color:                    $body-color;
+/// Color de fondo. Utiliza el definido en el tema
+/// @type Color
+$dropdown-bg:                       $white;
+
+/// Color de borde del dropdown. Oscurecido
+/// @type Color
+$dropdown-border-color:             rgba($black, .25);
+// Utiliza el definido en _navs.scss
+$dropdown-divider-margin-y:         $nav-divider-margin-y;
+/// Sombra del dropdown. Oscurecido
+/// @type Color
+$dropdown-box-shadow:               0 .5rem 1rem rgba($black, .45);
+
+/// Color de los enlaces en el dropdown. Aclarado
+/// @type Color
+$dropdown-link-color:               $gray-800;
+/// Color de los enlaces en el dropdown cuando se hace hover. Oscurecido
+/// @type Color
+$dropdown-link-hover-color:         darken($gray-900, 10%);
+/// Color del fondo de los enlaces en el dropdown cuando se hace hover. Oscurecido
+/// @type Color
+$dropdown-link-hover-bg:            $gray-300;
+
+// Utiliza el color definido en _colors.scss
+$dropdown-link-active-color:        $component-active-color;
+$dropdown-link-active-bg:           $component-active-bg;
+
+/// Color de los enlaces en el dropdown cuando están deshabilitados. Utiliza text-muted
+/// @type Color
+$dropdown-link-disabled-color:      $text-muted;
+
+/// Padding vertical de los links del dropdown. Ampliado
+/// @type Number
+$dropdown-item-padding-y:           .35rem;

@@ -1,0 +1,62 @@
+////
+/// Personalización de tablas
+/// @group tables
+/// @author Jesús L. Pinzolas
+////
+
+
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+/// Padding de celda
+/// @type Number
+$table-cell-padding:          .75rem;
+/// Padding de celda pequeña
+/// @type Number
+$table-cell-padding-sm:       .25rem;
+
+/// Color de texto de tabla
+/// @type Color
+$table-color:                 $body-color;
+/// Color de fondo de tabla
+/// @type Color
+$table-bg:                    $body-bg;
+
+// Resto de variables utilizadas en la tabla. Hay que dejarlos para que tengan el color y el tamaño correctos
+$table-accent-bg:             rgba($black, .05);
+$table-hover-color:           $table-color;
+$table-hover-bg:              rgba($black, .075);
+$table-active-bg:             $table-hover-bg;
+$table-border-width:          $border-width;
+$table-border-color:          $border-color;
+
+
+// Tabla oscura
+
+/// Color de texto de tabla oscura
+/// @type Color
+$table-dark-color:            $white;
+/// Color de fondo de tabla
+/// @type Color
+$table-dark-bg:               $black;
+
+/// Color de fondo de la fila destacada
+/// @type Color
+$table-dark-accent-bg:        rgba($white, .15);
+
+/// Color de texto de la tabla cuando se hace hover
+/// @type Color
+$table-dark-hover-color:      $table-dark-color;
+/// Color de fondo de la tabla cuando se hace hover
+/// @type Color
+$table-dark-hover-bg:         rgba($white, .075);
+/// Color de los bordes de la tabla oscura
+/// @type Color
+$table-dark-border-color:     lighten($table-dark-bg, 25%);
+
+/// Destacar las filas impares cuando se utilice .table-striped
+/// @type String
+$table-striped-order:         even;
+
+/// Color del texto muted. Hay que dejarlo para que utilice el color definido
+/// @type Color
+$table-caption-color:         $text-muted;

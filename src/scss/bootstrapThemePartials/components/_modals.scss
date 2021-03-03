@@ -1,0 +1,47 @@
+////
+/// Personalización los modales
+/// @group modals
+/// @author Jesús L. Pinzolas
+////
+
+
+/// Padding interno. Aumentado
+/// @type Number
+$modal-inner-padding:               1.5rem;
+
+/// Margen entre elementos en el footer. Como mucho 2 * $modal-inner-padding. Aumentado
+/// @type Number
+$modal-footer-margin-between:       1rem;
+
+/// Color del texto del modal. Asignado negro
+/// @type Color
+$modal-content-color:               $black;
+/// Color de fondo del modal. Utiliza el blanco definido en _colors.scss
+/// @type Color
+$modal-content-bg:                  $white;
+/// Color del borde del modal. Oscurecido
+/// @type Color
+$modal-content-border-color:        rgba($black, .25);
+/// Color de sombra del modal. Oscurecida
+/// @type Color
+$modal-content-box-shadow-xs:       0 .25rem .5rem rgba($black, .75);
+/// Color de sombra del modal. Oscurecida
+/// @type Color
+$modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($black, .75);
+
+/// Opacidad del fondo que sale debajo del modal. Oscurecida
+/// @type Number
+$modal-backdrop-opacity:            .65;
+
+/// Padding horizontal del header. Tiene el mismo valor que el interno
+/// @type Number
+$modal-header-padding-x:            $modal-inner-padding;
+$modal-header-padding:              $modal-header-padding-y $modal-header-padding-x; // Keep this for backwards compatibility
+
+/// Posición inicial del modal cuando se usa la propiedad fade. Se coloca a -500 en vez de a -50. La animación es algo distinta en consecuencia
+/// @type String
+$modal-fade-transform:              translate(0, -500px);
+
+/// Transformación que se le aplica al modal. Cambiada la función
+/// @type String
+$modal-transition:                  transform .3s cubic-bezier(.01,0,.41,1.19);

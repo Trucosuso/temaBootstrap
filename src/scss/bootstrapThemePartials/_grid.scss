@@ -1,0 +1,23 @@
+////
+/// Personalización de los contenedores Grid
+/// @group grid
+/// @author Jesús L. Pinzolas
+////
+
+// Contenedores
+/// Anchura máxima de los ".container" para distintos tamaños de pantalla.
+/// @type Map
+$container-max-widths: (
+  sm: 545px,
+  md: 730px,
+  lg: 975px,
+  xl: 1160px
+);
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+
+// Columnas 
+/// Ancho del gutter en Grid. El .container tiene la mitad por cada lado como padding.
+/// @type Number
+$grid-gutter-width:           35px;

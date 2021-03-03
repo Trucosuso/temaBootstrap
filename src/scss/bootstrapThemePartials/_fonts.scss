@@ -1,0 +1,73 @@
+////
+/// Personalización de tipografías
+/// @group fonts
+/// @author Jesús L. Pinzolas
+////
+
+
+/// Importar tipografías Sans Serif Roboto y Open Sans de google fonts
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
+
+/// Importar tipografías Serif Playfair Display y Shippori Mincho de google fonts
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Shippori+Mincho&display=swap");
+
+/// Importar tipografías Monoespaciadas Roboto Mono y Source Code Pro de google fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Code+Pro&display=swap");
+
+/// Tipografías sans serif
+/// @type List
+$font-family-sans-serif:      "Roboto", "Open Sans", sans-serif;
+
+/// Tipografías sans serif
+/// @type List
+$font-family-serif:      "Shippori Mincho", "Playfair Display", sans-serif;
+
+/// Tipografías monoespaciadas
+/// @type List
+$font-family-monospace:       "Source Code Pro", "Roboto Mono", monospace;
+
+/// Tipografía base
+/// @type List
+$font-family-base:            $font-family-sans-serif;
+
+/// Tamaño h1. Aumentado de 2.5 a 2.75
+/// @type Number
+$h1-font-size:                $font-size-base * 2.75;
+/// Tamaño h2. Aumentado de 2 a 2.25
+/// @type Number
+$h2-font-size:                $font-size-base * 2.25;
+/// Tamaño h3. Aumentado de 1.75 a 1.85
+/// @type Number
+$h3-font-size:                $font-size-base * 1.85;
+
+/// Tipografía de los headings. Le asignamos la tipografía Serif definida anteriormente
+/// @type List
+$headings-font-family:        $font-family-serif;
+
+/// Alto de línea de los títulos. Cambiado de 1.2 a 1.3
+/// @type Number
+$headings-line-height:        1.3;
+
+/// Tamaño de letra con clase small. Cambiado de 80 % a 75 %
+/// @type Number
+$small-font-size:             75%;
+
+/// Color de letra muted. Cambiado de gray-600 to gray-500
+/// @type Color
+$text-muted:                  $gray-500;
+
+/// Color de letra pequeña en las citas. Igual que text-muted
+/// @type Color
+$blockquote-small-color:      $text-muted;
+
+/// Tamaño de letra pequeña en las citas. Igual que small
+/// @type Number
+$blockquote-small-font-size:  $small-font-size;
+
+/// Color de borde de hr. Utiliza el color negro definido y es más opaco
+/// @type Color
+$hr-border-color:             rgba($black, .3);
+
+/// Color de sombra de kbd. Utiliza el color negro definido
+/// @type Color
+$kbd-box-shadow:              inset 0 -.1rem 0 rgba($black, .25);

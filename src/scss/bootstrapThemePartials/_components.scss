@@ -1,0 +1,51 @@
+////
+/// Personalización padding, bordes, radios, etc
+/// @group components
+/// @author Jesús L. Pinzolas
+////
+
+
+/// Color de borde por defecto
+/// @type Color
+$border-color:                $gray-400;
+
+/// Sombra pequeña. Se ha oscurecido de 0.075 a 0.15
+/// @type List
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .15);
+
+/// Sombra normal. Se ha oscurecido de 0.15 a 0.2
+/// @type List
+$box-shadow:                  0 .5rem 1rem rgba($black, .2);
+
+/// Sombra grande. Se ha oscurecido de 0.175 a 0.3
+/// @type List
+$box-shadow-lg:               0 1rem 3rem rgba($black, .3);
+
+/// Tamaño flecha de dropdowns
+/// @type Number
+$caret-width:                 .35em;
+
+/// Alineación vertical flecha de dropdowns
+/// @type Number
+$caret-vertical-align:        $caret-width * .55;
+
+/// Espacio flecha de dropdowns
+/// @type Number
+$caret-spacing:               $caret-width * .85;
+
+/// Transición base. Bajado el tiempo de 0.2s a 0.15s
+/// @type List
+$transition-base:             all .15s ease-in-out;
+/// Transición fade. Modificado a ease-in-out
+/// @type List
+$transition-fade:             opacity .15s ease-in-out;
+/// Transición collapse. Bajado el tiempo de 0.35s a 0.25s y cambiado a ease-in-out
+/// @type List
+$transition-collapse:         height .25s ease-in-out;
+
+/// Color de texto de elemento activo
+/// @type Color
+$component-active-color:      $white;
+/// Color de fondo de elemento activo
+/// @type Color
+$component-active-bg:         theme-color("primary");

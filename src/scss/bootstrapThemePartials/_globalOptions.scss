@@ -1,0 +1,21 @@
+////
+/// Personalización de opciones globales de bootstrap
+/// @group globalOptions
+/// @author Jesús L. Pinzolas
+////
+
+/// Desactivar bordes redondeados
+/// @type Boolean
+$enable-rounded:                              false;
+
+/// Activar sombras
+/// @type Boolean
+$enable-shadows:                              true;
+
+/// Activar gradientes
+/// @type Boolean
+$enable-gradients:                            false;
+
+/// Activar las fuentes responsivas
+/// @type Boolean
+$enable-responsive-font-sizes:                true;

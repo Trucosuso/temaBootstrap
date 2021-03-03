@@ -1,0 +1,65 @@
+////
+/// Personalización de navs y navbars
+/// @group navs
+/// @author Jesús L. Pinzolas
+////
+
+
+// Navs
+/// Padding vertical de los nav link. Ampliado
+/// @type Number
+$nav-link-padding-y:                .6rem;
+/// Padding horizontal de los nav link. Ampliado
+/// @type Number
+$nav-link-padding-x:                1rem;
+/// Color de texto de los nav link desactivados. Cambiado para que sea el mismo que text-muted
+/// @type Color
+$nav-link-disabled-color:           $text-muted;
+
+
+// Navbar
+/// Padding horizontal del navbar. Ampliado
+/// @type Number
+$navbar-padding-x:                  custom-spacing(4);
+/// Padding horizontal entre elementos nav-link del navbar. Ampliado
+/// @type Number
+$navbar-nav-link-padding-x:         .6rem;
+
+/// Tamaño de fuente del nav-brand. Aumentado
+/// @type Number
+$navbar-brand-font-size:            $font-size-lg * 1.25;
+
+// Variables necesarias para que se apliquen los cambios anteriores
+// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
+$nav-link-height:                   $font-size-base * $line-height-base + $nav-link-padding-y * 2;
+$navbar-brand-height:               $navbar-brand-font-size * $line-height-base;
+$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) / 2;
+
+/// Padding vertical del botón que despliega y contrae el navbar. Ampliado
+/// @type Number
+$navbar-toggler-padding-y:          .3rem;
+/// Padding horizontal del botón que despliega y contrae el navbar. Ampliado
+/// @type Number
+$navbar-toggler-padding-x:          .8rem;
+
+/// Color del texto de la navbar oscura. Menos transparente, por lo que es más claro
+/// @type Color
+$navbar-dark-color:                 rgba($white, .6);
+/// Color del texto de la navbar oscura cuando se hace hover. Menos transparente, por lo que es más claro
+/// @type Color
+$navbar-dark-hover-color:           rgba($white, .8);
+/// Color del texto de la navbar oscura cuando está activo. Menos transparente, por lo que es más claro
+/// @type Color
+$navbar-dark-active-color:          $white;
+/// Color del texto de la navbar oscura cuando está desactivado. Más transparente, por lo que es más oscuro
+/// @type Color
+$navbar-dark-disabled-color:        rgba($white, .2);
+// Icono del botón que despliega y contrae el navbar. Aplica el color anterior.
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+/// Color del borde del botón que despliega y contrae el navbar. Menos transparente, por lo que es más claro.
+/// @type String
+$navbar-dark-toggler-border-color:  rgba($white, .15);
+
+// Para aplicar los colores elegidos anteriormente
+$navbar-dark-brand-color:                 $navbar-dark-active-color;
+$navbar-dark-brand-hover-color:           $navbar-dark-active-color;

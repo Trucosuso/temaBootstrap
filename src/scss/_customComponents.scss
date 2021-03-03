@@ -1,0 +1,15 @@
+////
+/// Personalización de spinners
+/// @group spinners
+/// @author Jesús L. Pinzolas
+////
+
+/// Animación del spinner-border con el tiempo indicado en _spinner.scss
+.spinner-border {
+    animation: $spinner-animation-time linear infinite spinner-border;
+}
+
+/// Animación del spinner-grow con el tiempo indicado en _spinner.scss
+.spinner-grow {
+    animation: $spinner-animation-time linear infinite spinner-grow;
+}

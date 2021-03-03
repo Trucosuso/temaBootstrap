@@ -1,0 +1,35 @@
+////
+/// Personalización de las cards
+/// @group cards
+/// @author Jesús L. Pinzolas
+////
+
+/// Espacio vertical entre elementos de la carta. Aumentado
+/// @type Number
+$card-spacer-y:                     1rem;
+/// Padding horizontal dentro de la carta. Disminuido
+/// @type Number
+$card-spacer-x:                     1rem;
+/// Color del borde de la carta. Oscurecido
+/// @type Color
+$card-border-color:                 rgba($black, .25);
+/// Color del footer de la carta. Oscurecido
+/// @type Color
+$card-cap-bg:                       rgba($gray-500, .1);
+/// Color de fondo de la carta. Añadido un poco de transparencia
+/// @type Color
+$card-bg:                           rgba($white, .95);
+
+// Para utilizar los valores cambiados en _grid.scss
+$card-group-margin:                 $grid-gutter-width / 2;
+$card-deck-margin:                  $card-group-margin;
+
+/// Número de card columns. Aumentado a 4
+/// @type Number
+$card-columns-count:                4;
+/// Gap entre columnas
+/// @type Number
+$card-columns-gap:                  1.25rem;
+/// Margen de las columnas. Para utilizar el valor indicado anteriormente
+/// @type Number
+$card-columns-margin:               $card-spacer-y;

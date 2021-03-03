@@ -1,0 +1,105 @@
+////
+/// Personalización de variables de bootstrap
+/// Las variables tienen que serguir el esquema `$componente-estado-propiedad-tamaño` para ser consistentes.
+/// Ej: $nav-link-disabled-color y $modal-content-box-shadow-xs.
+/// @group boostrapTheme
+/// @author Jesús L. Pinzolas
+////
+
+// Funciones
+
+/// Devuelve el tamaño elegido del mapa $spacers
+/// @param {Number} $key Valor del mapa a elegir
+/// @return {Number} Tamaño elegido
+@function custom-spacing($key: 3) {
+  @return map-get($spacers, $key);
+}
+
+// Modificar colores
+@import "bootstrapThemePartials/colors";
+
+
+// Modificar opciones globales
+@import "bootstrapThemePartials/globalOptions";
+
+
+// Espacios
+// Cambiar la mayoría de los espacios de los elementos de Bootstrap.
+@import "bootstrapThemePartials/spacers";
+
+
+// Body
+@import "bootstrapThemePartials/body";
+
+// Enlaces
+@import "bootstrapThemePartials/links";
+
+
+// Párrafos
+@import "bootstrapThemePartials/paragraphs";
+
+
+// Contenedores Grid
+@import "bootstrapThemePartials/grid";
+
+
+
+// Componentes
+@import "bootstrapThemePartials/components";
+
+
+// Tipografías
+@import "bootstrapThemePartials/fonts";
+
+
+// Tablas
+@import "bootstrapThemePartials/components/tables";
+
+
+
+// Variables compartidas por botones y formularios. Variables $input- y $btn-
+
+/// Padding vertical de los input y botones
+/// @type Number
+$input-btn-padding-y:         .4rem;
+/// Padding horizontal de los input y botones
+/// @type Number
+$input-btn-padding-x:         .8rem;
+
+/// Tamaño de borde del focus en los botones e imputs
+/// @type Number
+$input-btn-focus-width:       .15rem;
+/// Color de borde del focus en los botones e imputs
+/// @type Color
+$input-btn-focus-color:       rgba($component-active-bg, .3);
+
+
+// Botones
+@import "bootstrapThemePartials/components/buttons";
+
+
+// Formularios
+@import "bootstrapThemePartials/components/forms";
+
+
+// Navs y navbars
+@import "bootstrapThemePartials/components/navs";
+
+
+// Dropdowns
+@import "bootstrapThemePartials/components/dropdown";
+
+// Jumbotron
+@import "bootstrapThemePartials/components/jumbotron";
+
+// Cards
+@import "bootstrapThemePartials/components/cards";
+
+// Modals
+@import "bootstrapThemePartials/components/modals";
+
+// Carousel
+@import "bootstrapThemePartials/components/carousel";
+
+// Spinners
+@import "bootstrapThemePartials/components/spinner";

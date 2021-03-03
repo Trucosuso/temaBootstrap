@@ -1,0 +1,30 @@
+////
+/// Personalización de spinners
+/// @group spinners
+/// @author Jesús L. Pinzolas
+////
+
+
+/// Tamaño del spinner. Aumentado
+/// @type Number
+$spinner-width:         3.5rem;
+$spinner-height:        $spinner-width;
+/// Grosor del spinner. Aumentado
+/// @type Number
+$spinner-border-width:  .5em;
+
+/// Tamaño del spinner pequeño. Aumentado
+/// @type Number
+$spinner-width-sm:        1.25rem;
+$spinner-height-sm:       $spinner-width-sm;
+/// Grosor del spinner pequeño. Disminuido
+/// @type Number
+$spinner-border-width-sm: .175em;
+
+/// Tiempo de animación de los spinners. Aumentado a 2s
+/// @type Number
+$spinner-animation-time: 2s;
+
+/// Tiempo de animación de los spinners con movimiento reducido. Doble del normal
+/// @type Number
+$spinner-animation-time-reduced-motion: $spinner-animation-time * 2;

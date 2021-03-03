@@ -1,0 +1,82 @@
+////
+/// Personalización de colores de bootstrap
+/// @group colors
+/// @author Jesús L. Pinzolas
+////
+
+
+/// Color blanco
+/// @type Color
+$white:    #fefefe;
+
+/// Color negro
+/// @type Color
+$black:    #212121;
+
+/// Color rosa
+/// @type Color
+$pink:    #f39b99;
+
+/// Color verde
+/// @type Color
+$green:   #063813;
+
+$colors: ();
+/// Nuevos colores
+/// @type Map 
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800,
+    "black":      $black
+  ),
+  $colors
+);
+
+/// Cambio de color primario al rosa personalizado
+/// @type Color
+$primary:       $pink;
+
+/// Cambio de color secundario al verde personalizado
+/// @type Color
+$secondary:     $green;
+
+/// Cambio de color claro al blanco personalizado
+/// @type Color
+$light:         $white;
+
+/// Cambio de color oscuro al negro personalizado
+/// @type Color
+$dark:          $black;
+
+$theme-colors: ();
+/// Nuevos colores de tema
+/// @type Map 
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
+
+/// Cambio de color del texto oscuro para utilizar en la función de contraste de color YIQ.
+/// @type Color
+$yiq-text-dark:             $black;

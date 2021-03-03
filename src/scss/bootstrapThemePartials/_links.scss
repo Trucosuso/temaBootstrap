@@ -1,0 +1,17 @@
+////
+/// Personalización de los enlaces
+/// @group links
+/// @author Jesús L. Pinzolas
+////
+
+/// Color de enlaces
+/// @type Color
+$link-color:                              theme-color("primary");
+
+/// Color de enlace al hacer hover
+/// @type Color
+$link-hover-color:                        darken($link-color, 25%);
+
+/// Porcentaje de oscurencimiento para links con clase tipo ".text-", por ejemplo ".text-success"
+/// @type Number
+$emphasized-link-hover-darken-percentage: 25%;
