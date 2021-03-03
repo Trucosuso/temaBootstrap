@@ -31,14 +31,14 @@ function generarCss() {
                 extname: ".css"
             }
         )))
-        .pipe(dest("./dist/css/"));
+        .pipe(dest("./proyecto/css/"));
 }
 
 /**
  * Copia las librerías de bootstrap a la carpeta de producción.
  */
 function moverLibrerias() {
-    return src("./node_modules/bootstrap/js/*/*").pipe(dest("./dist/js"));
+    return src("./node_modules/bootstrap/js/*/*").pipe(dest("./proyecto/js"));
 }
 
 var optionsProcesar = {
@@ -50,7 +50,7 @@ var optionsProcesar = {
 function procesarHtml() {
     return src("./src/index.html")
         .pipe(processhtml())
-        .pipe(dest("./dist", optionsProcesar));
+        .pipe(dest("./proyecto", optionsProcesar));
 }
 
 
@@ -61,7 +61,7 @@ function procesarHtml() {
 function optimizarImagenes() {
     return src("./src/images/*")
         .pipe(gulpImagemin())
-        .pipe(gulpNewer("./dist/images/"))
+        .pipe(gulpNewer("./proyecto/images/"))
         .pipe(
             gulpImagemin(
                 [
@@ -70,44 +70,44 @@ function optimizarImagenes() {
                 ],
                 { verbose: true })
         )
-        .pipe(dest("./dist/images"));
+        .pipe(dest("./proyecto/images"));
 }
 
 /**
  * Borra las imágenes de la carpeta de producción que no estén en la carpeta de src
  */
 function limpiarImagenesProduccion() {
-    // Array con las rutas de las imágenes de src y dist. Devuelve una matriz.
+    // Array con las rutas de las imágenes de src y proyecto. Devuelve una matriz.
     return Promise.all([
         globby("./src/images/*"),
-        globby("./dist/images/*")
+        globby("./proyecto/images/*")
     ])
         .then((paths) => {
             const srcFilepaths = paths[0];
-            const distFilepaths = paths[1];
+            const proyectoFilepaths = paths[1];
 
             // Array de archivos a eliminar
-            let distFilesToDelete = [];
+            let proyectoFilesToDelete = [];
 
             // Comprobar la diferencia de las ritas
-            distFilepaths.map((distFilepath) => {
-                // distFilepathFiltered: Cambia dist por src en la ruta para compararla
-                const distFilepathFiltered = distFilepath
-                    .replace(/\/dist/, "/src");
+            proyectoFilepaths.map((proyectoFilepath) => {
+                // proyectoFilepathFiltered: Cambia proyecto por src en la ruta para compararla
+                const proyectoFilepathFiltered = proyectoFilepath
+                    .replace(/\/proyecto/, "/src");
 
-                // Comprueba si distFilepathFiltered está en el array de archivos src.
+                // Comprueba si proyectoFilepathFiltered está en el array de archivos src.
                 // Si no lo está lo añade al array de archivos que eliminar
-                if (srcFilepaths.indexOf(distFilepathFiltered) === -1) {
-                    distFilesToDelete.push(distFilepath);
+                if (srcFilepaths.indexOf(proyectoFilepathFiltered) === -1) {
+                    proyectoFilesToDelete.push(proyectoFilepath);
                 }
             });
 
             // Devuelve el array de archivos que eliminar
-            return distFilesToDelete;
+            return proyectoFilesToDelete;
         })
-        .then((distFilesToDelete) => {
+        .then((proyectoFilesToDelete) => {
             // Elimina los archivos
-            del.sync(distFilesToDelete);
+            del.sync(proyectoFilesToDelete);
         })
         .catch((error) => {
             console.log(error);
@@ -118,8 +118,8 @@ function limpiarImagenesProduccion() {
  * Watch 
  */
 function watching() {
-    watch(["src/scss/*", "src/index.html"], parallel(generarCss, moverLibrerias, procesarHtml));
-    watch(["src/images/*"], parallel(optimizarImagenes, limpiarImagenesProduccion));
+    watch(["src/scss/**", "src/index.html"], parallel(generarCss, moverLibrerias, procesarHtml));
+    watch(["src/images/**"], parallel(optimizarImagenes, limpiarImagenesProduccion));
 }
 
 exports.watching = watching;
